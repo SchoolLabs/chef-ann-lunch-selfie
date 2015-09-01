@@ -1,0 +1,497 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="/lib/jquery-scrollto.js"></script>
+    
+    
+    <script type="text/javascript" src="/lib/jquery.fb.albumbrowser.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/jquery.fb.albumbrowser.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    
+    <script>
+          $(function() {
+            $( "#accordion" ).accordion({
+              collapsible: true,
+              heightStyle: "content",
+                active: false
+            });
+            $('#accordion h3').bind('click',function(){
+                var self = this;
+                setTimeout(function() {
+                    theOffset = $(self).offset();
+                    $('body,html').animate({ scrollTop: theOffset.top });
+                }, 310); // ensure the collapse animation is done
+            });
+
+              
+          });
+      </script>
+    
+    
+                  
+    
+    
+    <script>
+          $(function() {
+            $('#accordian').bind('accordianactivate', function(event, ui){
+                  $(ui.newHeader).scrollTo();
+              });
+          });
+        
+        
+    </script>
+    
+    
+    <!-- META DATA -->
+    <meta charset="utf-8"/><script type='text/javascript'>window.mod_pagespeed_start = Number(new Date());</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o?o:n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):void(r.q&&(r.q[e]||(r.q[e]=[]),r.q[e].push(n)))}var r=e("ee").create();n.exports=t,t.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=window,f=u.document;e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
+
+    <!-- SEO -->
+    
+    
+        <title>Chef Ann Foundation</title>
+<meta name='keywords' content='school food, connect, contact, help, answers, resources, resource, tool, tools, help'/>
+<meta name='description' content='Thank you for your interest in the Chef Ann Foundation. Contact us with questions or suggestions by filling out the form below. You can also stay connected by signing up for &lt;a href='/>
+<link rel='canonical' href='http://www.chefannfoundation.org/contact'/>
+
+        <meta property="og:updated_time" content="1440436019"/>
+        <meta property="og:title" content="Chef Ann Foundation - Contact"/>
+        <meta property="og:url" content="http://www.chefannfoundation.org/contact/"/>
+
+        
+        
+        
+                    <meta property="og:image" content="http://www.chefannfoundation.org/images/CAF-post-image-470x276-01.png"/>
+            
+
+    <!-- ICONS -->
+    <link rel="shortcut icon" type="image/ico" href="http://www.chefannfoundation.org/favicon.ico"/>
+    
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic|Francois+One' rel='stylesheet' type='text/css'>
+
+    <link type="text/css" href="http://a-rzogdygz.lagrangesystems.net/assets/styles/css/A.screen_caf.css.pagespeed.cf.Q-fmsyCwgE.css" rel="stylesheet" media="screen, projection, print"/>
+    <link rel="stylesheet" media="print" href="http://b-rzogdygz.lagrangesystems.net/assets/styles/css/A.print.css.pagespeed.cf.JATaSbLz3D.css"/>
+    <!--[if lt IE 8]><link href="http://www.chefannfoundation.org/assets/styles/ie7.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+    <!--[if lt IE 7]><link href="http://www.chefannfoundation.org/assets/styles/ie6.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject_src.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div class="page">
+    <div class="header" role="banner">
+
+        <div class="header-utility header-utility_caf">
+            <div class="split">
+                <div class="split-left">
+                    
+                        <ul class="header-utility-nav">
+                            <li>
+                                <a class="btn btn_donate btn_secondary" href="http://www.chefannfoundation.org/get-involved/donation-membership"><span class="btn-icon iconFont_heart"></span>Donate</a>
+                            </li>
+                            
+                                <li>
+                                                                            <a href="http://thelunchbox.org" target="_blank" class="header-utility-nav-align">The Lunch Box</a>
+                                                                    </li>
+                            
+                                <li>
+                                                                            <a href="http://www.chefannfoundation.org/news-media/the-lunch-line-blog/" class="header-utility-nav-align">The Lunch Line</a>
+                                                                    </li>
+                            
+                        </ul>
+                    
+                </div>
+                <div class="split-right">
+                    <form method="post" class="search" action="http://www.chefannfoundation.org/search/results">
+                        <input type="hidden" name="XID" value="a2b2ba8c751b0973dc978c8fb5a7e8e462bc7b70"/>
+                        <label class="isVisuallyHidden" for="site_search">Search Site</label>
+                        <input id="site_search" name="keywords" class="search-input mix-search-input_md" type="search" placeholder="Search..."/>
+                        <button type="submit" class="search-btn"><span class="isVisuallyHidden">Search Site</span></button>
+                    </form>
+                </div>
+            </div> <!-- end .split -->
+        </div> <!-- end .header-secondary -->
+
+        <h1 class="logo logo_caf">
+            <a href="http://www.chefannfoundation.org/">
+                <img src="http://b-rzogdygz.lagrangesystems.net/images/190xNxlogo-chef-ann-foundation-retina.png.pagespeed.ic.sUL6tY5MdK.png" width="190" alt="Chef Ann Foundation"/>
+            </a>
+        </h1>
+
+        <div class="primaryNav" role="navigation">
+            <div class="wrapper">
+                <ul class="primaryNav-list primaryNav-list_caf">
+<li class="level-1 first"><a href="http://www.chefannfoundation.org/about-us/"><span>About</span></a>
+<ul>
+<li class="level-2 first"><a href="http://www.chefannfoundation.org/about-us/our-story/"><span>Our Story</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/about-us/chef-ann/"><span>Chef Ann</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/about-us/the-team/"><span>The Team</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/about-us/supporters/"><span>Supporters</span></a></li>
+<li class="level-2 last"><a href="http://www.chefannfoundation.org/about-us/faq/"><span>FAQ</span></a></li>
+</ul>
+</li>
+<li class="level-1"><a href="http://www.chefannfoundation.org/programs/"><span>Programs</span></a>
+<ul>
+<li class="level-2 first"><a href="http://www.chefannfoundation.org/programs/the-lunch-box/"><span>The Lunch Box</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/programs/salad-bars-to-schools/"><span>Salad Bars to Schools</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/programs/project-produce/"><span>Project Produce</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/programs/parent-advocacy-initiative/"><span>Parent Advocacy Initiative</span></a></li>
+<li class="level-2 last"><a href="http://www.chefannfoundation.org/programs/healthy-breakfast-for-kids/"><span>Healthy Breakfast for Kids</span></a></li>
+</ul>
+</li>
+<li class="level-1"><a href="http://www.chefannfoundation.org/news-media/"><span>News &amp; Media</span></a>
+<ul>
+<li class="level-2 first"><a href="http://www.chefannfoundation.org/news-media/the-lunch-line-blog/"><span>The Lunch Line</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/news-media/multimedia-content/"><span>Multimedia Content</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/news-media/press-center/"><span>Press Center</span></a></li>
+<li class="level-2 last"><a href="http://www.chefannfoundation.org/news-media/blogger-program/"><span>Blogger Program</span></a></li>
+</ul>
+</li>
+<li class="level-1"><a href="http://www.chefannfoundation.org/get-involved/"><span>Get Involved</span></a>
+<ul>
+<li class="level-2 first"><a href="http://www.chefannfoundation.org/get-involved/donation-membership/"><span>Donation &amp; Membership</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/get-involved/create-a-fundraiser/"><span>Create a Fundraiser</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/get-involved/our-grants/"><span>Our Grants</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/get-involved/stay-connected/"><span>Stay Connected</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/get-involved/do-one-thing/"><span>Do One Thing</span></a></li>
+<li class="level-2 last"><a href="http://www.chefannfoundation.org/get-involved/webinars/"><span>Webinars</span></a></li>
+</ul>
+</li>
+<li class="level-1"><a href="http://www.chefannfoundation.org/for-parents/"><span>For Parents</span></a>
+<ul>
+<li class="level-2 first"><a href="http://www.chefannfoundation.org/for-parents/get-inspired/"><span>Get Inspired</span></a></li>
+<li class="level-2"><a href="http://www.chefannfoundation.org/for-parents/parent-advocacy-toolkit/"><span>Parent Advocacy Toolkit</span></a></li>
+<li class="level-2 last"><a href="http://www.chefannfoundation.org/for-parents/home-recipes/"><span>Home Recipes</span></a></li>
+</ul>
+</li>
+<li class="level-1 last"><a href="http://www.chefannfoundation.org/contact/"><span>Contact</span></a></li>
+</ul>
+            </div>
+        </div>
+        <div class="tagline">Changing the way we feed our kids</div>
+    </div> <!-- end .header -->
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="content" role="main">
+        <div class="wrapper">
+            
+            <div id="titleSection" class="contentSection">
+                <img src="imgs/title-banner.jpg">
+            </div> <!-- end .titleSection  -->
+            
+            <div id="socialSection" class="contentSection">
+                <div class="facebookFeed">
+                    <div class="fb-album-container"></div>
+
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $(".fb-album-container").FacebookAlbumBrowser({
+                                account: "chefannfoundation",
+                                onlyAlbum: 10150433804992704,
+                                accessToken: "775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4",
+                                skipAlbums: ["Profile Pictures", "Timeline Photos"],
+                                showAccountInfo: false,
+                                showImageCount: false,
+                                showImageText: false,
+                                lightbox: false,
+                                photosCheckbox: true,
+                                photosPageSize: 8,
+                                photoChecked: function(photo){
+                                },
+                                photoUnchecked: function (photo) {
+                                },
+                                albumSelected: function (photo) {
+                                },
+                                photoSelected: function (photo) {
+                                }
+                            });
+                        });
+                    </script>
+                </div> <!-- end .facebookFeed  -->
+                
+            </div> <!-- end .socialSection  -->
+            
+            <div id="infographicSection" class="contentSection">
+<!--
+                <h3 id="chefAnnH" class="infoH" >Chef Ann</h3>
+                <p id="chefAnnP" class="infoP" >Chef Ann Cooper is an internationally recognized author, chef, educator, public speaker, and advocate of healthy food for all children.</p>
+                
+                <h3 id="whyHelpH" class="infoH" >Why Help?</h3>
+                <p id="whyHelpP" class="infoP">When students get the proper nutrition they need to perform better in school and it has a lasting impact on the childs life.</p>
+                
+-->
+            </div> <!-- end .infographicSection  -->
+            
+            <div id="aboutSection">
+            
+            </div> <!-- end .aboutSection  -->
+            
+            <div id="whySection">
+            
+            </div> <!-- end .whySection  -->
+            
+            
+            <div id="getInvolvedSection" class="contentSection">
+                <img id="getInvolvedImage" src="imgs/get-involved.png">
+            </div> <!-- end .getInvolvedSection  -->
+            
+            <div id="lunchSection" class="contentSection">
+                
+                <img src="imgs/lunch-banner.png">
+                
+                <div id="accordion">
+                    
+                    <h3 id="lunch1" class="lunchThumbnail"><span class="foodNames">Shredded Pork Tacos</span></h3>
+                    <div class="lunchDetails">
+                        <h4 class="lunchDetails-name"> Shredded Pork Tacos </h4>
+                        <a class="fullscreen-btn"></a>
+                        <br>
+                        <p class="lunchDetails-comment">Move over PB&J, because Shredded Pork Tacos are my new lunchroom hero. #realschoolfood</p>
+                        <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
+                    </div>
+                    
+                    <h3 id="lunch2" class="lunchThumbnail"><span class="foodNames">Cuban Sandwich</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch3" class="lunchThumbnail"><span class="foodNames">Crispy Chicken Bowl</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch4" class="lunchThumbnail"><span class="foodNames">Chicken Street Tacos</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch5" class="lunchThumbnail"><span class="foodNames">Veggie Enchilada</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch6" class="lunchThumbnail"><span class="foodNames">Veggie Burger</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch7" class="lunchThumbnail"><span class="foodNames">Chicken Pesto Sandwich</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch8" class="lunchThumbnail"><span class="foodNames">Falafel Pita Wrap</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch9" class="lunchThumbnail"><span class="foodNames">Oven Fried Chicken</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch10" class="lunchThumbnail"><span class="foodNames">Asian Noodles</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch11" class="lunchThumbnail"><span class="foodNames">Southwest Chicken Pizza</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                    
+                    <h3 id="lunch12" class="lunchThumbnail"><span class="foodNames">Beef & Broccoli</span></h3>
+                    <div class="lunchDetails">
+
+                    </div>
+                </div><!-- end .accordian  -->
+            </div> <!-- end .lunchSection  -->
+            <div id="wrapUpSection" class="contentSection">
+                <img src="imgs/wrap-up.png">
+            </div> <!-- end .wrapUpSection  -->
+            
+        </div> <!-- end .wrapper -->
+    </div> <!-- end .content-->
+</div> <!--end .page -->
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+<div class="footer" role="contentinfo">
+    <div class="footer-inner">
+        <h2 class="isVisuallyHidden">Footer Links</h2>
+        <div class="split">
+            <div class="split-left">
+                <h3 class="isVisuallyHidden">Social Media Links</h3>
+                
+                    <ul class="hList hList_md">
+                        <li><a href="https://www.facebook.com/chefannfoundation" title="Visit us on Facebook" target="_blank"><img src="http://c-rzogdygz.lagrangesystems.net//images/xsocial-fb.jpg.pagespeed.ic.4ZLNO6843E.jpg" alt="Visit us on Facebook"/></a></li>
+                        <li><a href="http://www.twitter.com/ChefAnnFnd/" title="Visit us on Twitter" target="_blank"><img src="http://b-rzogdygz.lagrangesystems.net/images/xsocial-twitter.png.pagespeed.ic.8e0ptDtYMc.png" alt="Visit us on Twitter"/></a></li>
+                        <li><a href="https://www.youtube.com/c/ChefannfoundationOrg" title="Visit us on Youtube" target="_blank"><img src="http://a-rzogdygz.lagrangesystems.net/images/xsocial-youtube.png.pagespeed.ic.GXetgbzeUZ.png" alt="Visit us on Youtube"/></a></li>
+                        <li><a href="https://plus.google.com/+ChefannfoundationOrg/" title="Visit us on Google+" target="_blank"><img src="http://b-rzogdygz.lagrangesystems.net/images/xsocial-googleplus.png.pagespeed.ic.UbcHwC-GrK.png" alt="Visit us on Google+"/></a></li>
+                        <li><a href="http://www.pinterest.com/ChefAnnFnd/" title="Visit us on Pinterest" target="_blank"><img src="http://a-rzogdygz.lagrangesystems.net/images/xsocial-pinterest.png.pagespeed.ic.QcD0QyMI6Y.png" alt="Visit us on Pinterest"/></a></li>
+                        <li><a href="https://instagram.com/chefannfoundation/" title="Visit us on Instagram" target="_blank"><img src="http://b-rzogdygz.lagrangesystems.net/images/xsocial-instagram.png.pagespeed.ic.VHtvFDjre-.png" alt="Visit us on Instagram"/></a></li>
+                    </ul>
+                
+                <ul class="footer-utilityNav">
+                    <li><a href="http://www.chefannfoundation.org/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="http://www.chefannfoundation.org/site-map/">Sitemap</a></li>
+                </ul>
+                <div class="copyright">&copy; 2015 Chef Ann Cooper. All Rights Reserved.</div>
+            </div>
+            <div class="split-right">
+                <h2 class="hdg hdg_5 mix-hdg_sm">Programs + Initiatives</h2>
+                    
+                        <ul class="hList hList_md">
+                            <li>
+                                <a href="http://www.thelunchbox.org" rel="external" target="_blank">
+                                    <img src="http://c-rzogdygz.lagrangesystems.net/images/140xNxprogram-logo-chef-ann-lunchbox-new.png.pagespeed.ic.uGEAzyOVJu.png" width="140" alt="Visit Lunchbox"/>
+                                </a>
+                            </li>
+                            <li>
+                                <ul class="vList vList_md">
+                                    
+                                        <li>
+                                                                                            <a href="http://www.chefannfoundation.org/programs/salad-bars-to-schools" target="_blank" class="actionLink">Let's Move Salad Bars to Schools</a>
+                                                                                    </li>
+                                    
+                                        <li>
+                                                                                            <a href="http://www.chefannfoundation.org/programs/healthy-breakfast-for-kids" target="_blank" class="actionLink">Healthy Breakfast for Kids</a>
+                                                                                    </li>
+                                    
+                                        <li>
+                                                                                            <a href="http://www.chefannfoundation.org/programs/parent-advocacy-initiative" target="_blank" class="actionLink">Parent Advocacy Initiative</a>
+                                                                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                
+            </div>
+        </div>
+    </div> <!-- end .split -->
+</div> <!--end .footer -->
+
+<script src="http://www.chefannfoundation.org/assets/scripts/src/lib-thirdparty/require.js"></script>
+<script>//<![CDATA[
+require.config({paths:{'jquery':'lib-thirdparty/jquery-1.9.1.min','jquery-ui':'lib-thirdparty/jquery-ui-1.10.2.custom.min','jwPlayer':'lib-thirdparty/jwplayer/jwplayer','select2':'lib-thirdparty/select2','jquery-cookie':'lib-thirdparty/jquery-cookie','base64':'lib-thirdparty/base64','masonry':'lib-thirdparty/masonry.min','highlight':'lib-thirdparty/jquery.highlight-5'},shim:{'jquery':{exports:'$'},'jquery-ui':{deps:['jquery']},'jwPlayer':{deps:['jquery']},'base64':{exports:'B64'},'select2':{exports:'jquery',deps:['jquery']},'masonry':['jquery'],'highlight':['jquery']}});
+//]]></script>
+<script>window.SETTINGS={};SETTINGS.IS_PRODUCTION=false;SETTINGS.LOG_CONSOLE=SETTINGS.IS_PRODUCTION?false:true;SETTINGS.APP_VERSION='1.0.1';SETTINGS.CACHE_BUSTER=SETTINGS.IS_PRODUCTION?'':Math.random();SETTINGS.USE_COMBINED_JAVASCRIPT=SETTINGS.IS_PRODUCTION?true:false;SETTINGS.SCRIPT_PATH='http://www.chefannfoundation.org/assets/scripts/src/';SETTINGS.SHORT_NAME='caf';SETTINGS.URLS={SITE:'http://www.chefannfoundation.org/',FIND_OR_CREATE_ANALYTICS_ID:"http://www.chefannfoundation.org/?ACT=79"};require.config({baseUrl:SETTINGS.SCRIPT_PATH,urlArgs:'v='+SETTINGS.APP_VERSION+(SETTINGS.CACHE_BUSTER!=''?'&bust='+SETTINGS.CACHE_BUSTER:''),waitSeconds:120});require(['main']);</script>
+
+
+<div id="fb-root"></div>
+<script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=430230150442240";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));</script>
+
+
+<script>var _gaq=_gaq||[];(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script>
+
+    
+    <div data-js-module="analyticsBase"></div>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cc906a8513","applicationID":"8299661","transactionName":"YlZTZRBWCkEFU0FQVlscckQRQwtfS1NaV01UUEURTxcnWgFWFXhXWxN3XhdZAFMQWVpX","queueTime":0,"applicationTime":596,"atts":"ThFQE1hMGU8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-686.min.js"}</script><script pagespeed_no_defer="">//<![CDATA[
+(function(){window.pagespeed=window.pagespeed||{};var f=window.pagespeed,h=function(e,a,c,b){this.c=e;this.a=a;this.b=c;this.d=b};f.beaconUrl="";
+var k=function(e){var a=e.c,c=window.mod_pagespeed_start,b=Number(new Date)-c,a=a+(-1==a.indexOf("?")?"?":"&"),a=a+"ets="+("load"==e.a?"load:":"unload:"),a=a+b;if("beforeunload"!=e.a||!window.mod_pagespeed_loaded){a+="&r"+e.a+"=";if(window.performance){var b=window.performance.timing,d=b.navigationStart,g=b.requestStart,a=a+(b[e.a+"EventStart"]-d),a=a+("&nav="+(b.fetchStart-d)),a=a+("&dns="+(b.domainLookupEnd-b.domainLookupStart)),a=a+("&connect="+(b.connectEnd-b.connectStart)),a=a+("&req_start="+
+(g-d)),a=a+("&ttfb="+(b.responseStart-g)),a=a+("&dwld="+(b.responseEnd-b.responseStart)),a=a+("&dom_c="+(b.domContentLoadedEventStart-d));window.performance.navigation&&(a+="&nt="+window.performance.navigation.type);d=-1;b.msFirstPaint?d=b.msFirstPaint:window.chrome&&window.chrome.loadTimes&&(d=Math.floor(1E3*window.chrome.loadTimes().firstPaintTime));d=d-g;0<=d&&(a+="&fp="+d)}else a+=b;f.getResourceTimingData&&window.parent==window&&(a+=f.getResourceTimingData());a+=window.parent!=window?"&ifr=1":
+"&ifr=0";"load"==e.a&&(window.mod_pagespeed_loaded=!0,(b=window.mod_pagespeed_num_resources_prefetched)&&(a+="&nrp="+b),(b=window.mod_pagespeed_prefetch_start)&&(a+="&htmlAt="+(c-b)));f.panelLoader&&(c=f.panelLoader.getCsiTimingsString(),""!=c&&(a+="&b_csi="+c));f.criticalCss&&(c=f.criticalCss,a+="&ccis="+c.total_critical_inlined_size+"&cces="+c.total_original_external_size+"&ccos="+c.total_overhead_size+"&ccrl="+c.num_replaced_links+"&ccul="+c.num_unreplaced_links);""!=e.b&&(a+=e.b);document.referrer&&
+(a+="&ref="+encodeURIComponent(document.referrer));a+="&url="+encodeURIComponent(e.d);f.beaconUrl=a;(new Image).src=a}};f.e=function(e,a,c,b){var d=new h(e,a,c,b);window.addEventListener?window.addEventListener(a,function(){k(d)},!1):window.attachEvent("on"+a,function(){k(d)})};f.addInstrumentationInit=f.e;})();
+
+pagespeed.addInstrumentationInit('/mod_pagespeed_beacon', 'load', '', 'http://www.chefannfoundation.org/contact/');
+//]]></script></body>
+</html>
+
+
+
+
+
+
+
+
+
+
