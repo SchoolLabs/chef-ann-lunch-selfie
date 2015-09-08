@@ -1,3 +1,4 @@
+
 h3.fb-album-heading, h3.fb-account-heading {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: none;
@@ -44,12 +45,7 @@ ul.fb-albums, ul.fb-photos {
 li.fb-album, li.fb-photo {
     display: inline-block;
     
-    width: auto;
-    height: auto;
     overflow: hidden;
-    background-image: url('loader.gif');
-    background-position: center center;
-    background-repeat: no-repeat;
     cursor: pointer;
     border-bottom-style: none;
     

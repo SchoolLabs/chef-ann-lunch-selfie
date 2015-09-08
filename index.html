@@ -1,16 +1,19 @@
     <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="/lib/jquery-scrollto.js"></script>
+    <script src="/src/jquery-scrollto.js"></script>
     
     
-    <script type="text/javascript" src="/lib/jquery.fb.albumbrowser.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/jquery.fb.albumbrowser.css" />
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script type="text/javascript" src="/src/jquery.fb.albumbrowser.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fb.albumbrowser.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/style_l.css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" type="text/css" href="/css/style_p.css" media="screen and (orientation: portrait)">
     
     <script>
           $(function() {
@@ -85,7 +88,40 @@
 
 </head>
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 <body>
+    
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1461596604148589',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>    
 
 <div class="page">
     <div class="header" role="banner">
@@ -217,20 +253,51 @@
     
     
     
+<script>
+    
+function selectText(element) {
+    var doc = document;
+    var text = doc.getElementById(element);    
+
+    if (doc.body.createTextRange) { // ms
+        var range = doc.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) { // moz, opera, webkit
+        var selection = window.getSelection();            
+        var range = doc.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
+    
+    function goFullscreenMode(img){
+        document.getElementById("fullscreen-meal").src = img;
+        $('#fullscreen-mode').fadeIn();
+    }
+    
+    function exitFullscreenMode(){
+        $('#fullscreen-mode').fadeOut();
+    }
+    
+    function copyToClipboard(elementId) {
+        var aux = document.createElement("input");
+        aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
+    }
+    
+    $(function() {
+        $('.copyComment').click(function() {
+            selectText('#temp2');
+        });
+    });
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+</script>    
     
     
     <div class="content" role="main">
@@ -239,48 +306,39 @@
             <div id="titleSection" class="contentSection">
                 <img src="imgs/title-banner.jpg">
             </div> <!-- end .titleSection  -->
-            
+
             <div id="socialSection" class="contentSection">
                 <div class="facebookFeed">
                     <div class="fb-album-container"></div>
 
-                    <script type="text/javascript">
+                      <script type="text/javascript">
                         $(document).ready(function () {
-                            $(".fb-album-container").FacebookAlbumBrowser({
+                          $(".fb-album-container").FacebookAlbumBrowser({
                                 account: "chefannfoundation",
                                 onlyAlbum: 10150433804992704,
                                 accessToken: "775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4",
-                                skipAlbums: ["Profile Pictures", "Timeline Photos"],
                                 showAccountInfo: false,
                                 showImageCount: false,
                                 showImageText: false,
                                 lightbox: false,
                                 photosCheckbox: true,
-                                photosPageSize: 8,
-                                photoChecked: function(photo){
-                                },
-                                photoUnchecked: function (photo) {
-                                },
-                                albumSelected: function (photo) {
-                                },
-                                photoSelected: function (photo) {
-                                }
+                              photosPageSize: 8
+                                
                             });
                         });
-                    </script>
+                  </script>
+                    
                 </div> <!-- end .facebookFeed  -->
                 
             </div> <!-- end .socialSection  -->
             
             <div id="infographicSection" class="contentSection">
-<!--
-                <h3 id="chefAnnH" class="infoH" >Chef Ann</h3>
-                <p id="chefAnnP" class="infoP" >Chef Ann Cooper is an internationally recognized author, chef, educator, public speaker, and advocate of healthy food for all children.</p>
                 
-                <h3 id="whyHelpH" class="infoH" >Why Help?</h3>
-                <p id="whyHelpP" class="infoP">When students get the proper nutrition they need to perform better in school and it has a lasting impact on the childs life.</p>
-                
--->
+                <div class="btn-container">
+                    <span class="info-btn-text"></span>
+                    <a class="btn btn_secondary info-btn" href="http://www.chefannfoundation.org/about-us/our-story/"><span class="info-btn-text">Learn  More</span></a>
+                    <a class="btn btn_secondary info-btn" href="http://www.chefannfoundation.org/about-us/chef-ann/"><span class="info-btn-text">Meet  Chef  Ann</span></a>
+                </div>
             </div> <!-- end .infographicSection  -->
             
             <div id="aboutSection">
@@ -302,69 +360,96 @@
                 
                 <div id="accordion">
                     
-                    <h3 id="lunch1" class="lunchThumbnail"><span class="foodNames">Shredded Pork Tacos</span></h3>
+                    <h3 id="lunch1" class="lunchThumbnail"><span class="foodNames">BBQ Pork Ribs</span></h3>
                     <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Shredded Pork Tacos </h4>
-                        <a class="fullscreen-btn"></a>
+                        <h4 class="lunchDetails-name"> BBQ Pork Ribs </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/bbq-pork-ribs.jpg'); return false;"></a>
                         <br>
-                        <p class="lunchDetails-comment">Move over PB&J, because Shredded Pork Tacos are my new lunchroom hero. #realschoolfood</p>
+                        <div ><p class="lunchDetails-comment" id="comment1" id="temp2">Move over PB&J, because Shredded Pork Tacos are my new lunchroom hero. #realschoolfood</p></div>
+                        <a class="btn btn_secondary copyComment" onclick="copyToClipboard('comment1'); return false;"><span class="copyComment-text">Copy comment</span></a>
+                    </div>
+                    
+                    
+                    <h3 id="lunch2" class="lunchThumbnail"><span class="foodNames">Beef and Broccoli</span></h3>
+                    <div class="lunchDetails">
+                        <h4 class="lunchDetails-name"> Beef and Broccoli </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/beef-and-broccoli.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment2" onclick="copyToClipboard('comment2')">COMMENTCOMMENTCOMMENT</p>
                         <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch2" class="lunchThumbnail"><span class="foodNames">Cuban Sandwich</span></h3>
+                    
+                    <h3 id="lunch3" class="lunchThumbnail"><span class="foodNames">Shredded Pork Tacos</span></h3>
                     <div class="lunchDetails">
-
+                        <h4 class="lunchDetails-name"> Shredded Pork Tacos </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/shredded-pork-tacos.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment2" onclick="copyToClipboard('comment2')">COMMENTCOMMENTCOMMENT</p>
+                        <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch3" class="lunchThumbnail"><span class="foodNames">Crispy Chicken Bowl</span></h3>
+                    
+                    <h3 id="lunch4" class="lunchThumbnail"><span class="foodNames">Pulled Pork Sandwich</span></h3>
                     <div class="lunchDetails">
-
+                        <h4 class="lunchDetails-name"> Pulled Pork Sandwich </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/pulled-pork-sandwich.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment3" onclick="copyToClipboard('comment3')">COMMENTCOMMENTCOMMENT</p>
+                        <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch4" class="lunchThumbnail"><span class="foodNames">Chicken Street Tacos</span></h3>
+                    
+                    <h3 id="lunch5" class="lunchThumbnail"><span class="foodNames">Oven Fried Chicken</span></h3>
                     <div class="lunchDetails">
-
+                        <h4 class="lunchDetails-name"> Oven Fried Chicken </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/oven-fried-chicken.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment4" onclick="copyToClipboard('comment4')">COMMENTCOMMENTCOMMENT</p>
+                        <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch5" class="lunchThumbnail"><span class="foodNames">Veggie Enchilada</span></h3>
+                    
+                    <h3 id="lunch6" class="lunchThumbnail"><span class="foodNames">Turkey Rueben Sandwich</span></h3>
                     <div class="lunchDetails">
-
+                        <h4 class="lunchDetails-name"> Turkey Rueben Sandwich </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/turkey-rueben-sandwich.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment5" onclick="copyToClipboard('comment5')">COMMENTCOMMENTCOMMENT</p>
+                        <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch6" class="lunchThumbnail"><span class="foodNames">Veggie Burger</span></h3>
+                    
+                    <h3 id="lunch7" class="lunchThumbnail"><span class="foodNames">Veggie Burger</span></h3>
                     <div class="lunchDetails">
-
+                        <h4 class="lunchDetails-name"> Veggie Burger </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/veggie-burger.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment6" onclick="copyToClipboard('comment6')">COMMENTCOMMENTCOMMENT</p>
+                        <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch7" class="lunchThumbnail"><span class="foodNames">Chicken Pesto Sandwich</span></h3>
+                    
+                    <h3 id="lunch8" class="lunchThumbnail"><span class="foodNames">Veggie Tofu Rice Bowl</span></h3>
                     <div class="lunchDetails">
-
+                        <h4 class="lunchDetails-name"> Veggie Tofu Rice Bowl </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/veggie-tofu-rice-bowl.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment7" onclick="copyToClipboard('comment7')">COMMENTCOMMENTCOMMENT</p>
+                        <a class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch8" class="lunchThumbnail"><span class="foodNames">Falafel Pita Wrap</span></h3>
+                    
+                    <h3 id="lunch9" class="lunchThumbnail"><span class="foodNames">Pesto Pizza</span></h3>
                     <div class="lunchDetails">
-
+                        <h4 class="lunchDetails-name"> Pesto Pizza </h4>
+                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/pesto-pizza.jpg'); return false;"></a>
+                        <br>
+                        <p class="lunchDetails-comment" id="comment8">COMMENTCOMMENTCOMMENT</p>
+                        <a class="btn btn_secondary copyComment" onclick="copyToClipboard('comment8'); return false;"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
-                    <h3 id="lunch9" class="lunchThumbnail"><span class="foodNames">Oven Fried Chicken</span></h3>
-                    <div class="lunchDetails">
-
-                    </div>
                     
-                    <h3 id="lunch10" class="lunchThumbnail"><span class="foodNames">Asian Noodles</span></h3>
-                    <div class="lunchDetails">
-
-                    </div>
-                    
-                    <h3 id="lunch11" class="lunchThumbnail"><span class="foodNames">Southwest Chicken Pizza</span></h3>
-                    <div class="lunchDetails">
-
-                    </div>
-                    
-                    <h3 id="lunch12" class="lunchThumbnail"><span class="foodNames">Beef & Broccoli</span></h3>
-                    <div class="lunchDetails">
-
-                    </div>
                 </div><!-- end .accordian  -->
             </div> <!-- end .lunchSection  -->
             <div id="wrapUpSection" class="contentSection">
@@ -377,16 +462,23 @@
  
     
     
+
     
     
     
     
+<div id="fullscreen-mode" onclick="exitFullscreenMode(); return false;">
     
+    <div id="rotate-screen-overlay">
+        <div id="rotate-screen-overlay-background" ></div>
+        <div id="rotate-screen-overlay-message">
+            <span id="rotate-screen-overlay-text">Please rotate your phone</span>
+                <img src="imgs/rotate-arrow.png">
+        </div>
+    </div>
     
-    
-    
-    
-    
+    <img id="fullscreen-meal" src="/imgs/bbq-pork-ribs.jpg">
+</div><!--end #fullscreen-mode-->
     
     
     
@@ -459,6 +551,7 @@
     </div> <!-- end .split -->
 </div> <!--end .footer -->
 
+    
 <script src="http://www.chefannfoundation.org/assets/scripts/src/lib-thirdparty/require.js"></script>
 <script>//<![CDATA[
 require.config({paths:{'jquery':'lib-thirdparty/jquery-1.9.1.min','jquery-ui':'lib-thirdparty/jquery-ui-1.10.2.custom.min','jwPlayer':'lib-thirdparty/jwplayer/jwplayer','select2':'lib-thirdparty/select2','jquery-cookie':'lib-thirdparty/jquery-cookie','base64':'lib-thirdparty/base64','masonry':'lib-thirdparty/masonry.min','highlight':'lib-thirdparty/jquery.highlight-5'},shim:{'jquery':{exports:'$'},'jquery-ui':{deps:['jquery']},'jwPlayer':{deps:['jquery']},'base64':{exports:'B64'},'select2':{exports:'jquery',deps:['jquery']},'masonry':['jquery'],'highlight':['jquery']}});

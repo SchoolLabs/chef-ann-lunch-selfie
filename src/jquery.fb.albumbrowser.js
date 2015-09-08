@@ -9,6 +9,7 @@
  */
 
 (function ($) {
+    
     $.fn.FacebookAlbumBrowser = function (options) {
         var defaults = {
             account: "",
@@ -135,8 +136,8 @@
 //                                                var prefWidth = listItem.width();
 //                                                var prefHeight = listItem.height();
                                                 
-                                                var prefWidth = 234;
-                                                var prefHeight = 234;
+                                                var prefWidth = 400;
+                                                var prefHeight = 400;
                                                 
                                                 
                                                 var albumImg = $(cover.images)[0]
@@ -202,7 +203,7 @@
                                                 thumb: $(self).find("img.fb-album-thumb").attr("src")
                                             });
                                         }
-
+                                        
                                         loadPhotos(invokeUrl, photosContainer);
 
                                         $(selector).find("ul.fb-albums").fadeOut(function () {
@@ -226,7 +227,7 @@
             }
 
             function loadPhotos(url, container) {
-
+                
                 $(container).addClass("fb-loading-image");
 
                 var previewContainer = container.parent();
@@ -277,7 +278,7 @@
                         });
                     }
                 }
-
+                
                 $.ajax({
                     type: 'GET',
                     url: url,
