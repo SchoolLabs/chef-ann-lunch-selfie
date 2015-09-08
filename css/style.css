@@ -23,45 +23,6 @@
     text-transform: none;
 }
 
-.infoH{
-    font-weight: 900;
-    font-size: 24px;
-    color: black;
-}
-
-#chefAnnH{
-    top: 595px;
-    left: 55px;
-    width: 100px;
-    position: relative;
-}
-
-#whyHelpH{
-    top: 510px;
-    left: 290px;
-    position: relative;
-}
-
-.infoP{
-    font-size: 13.5px;
-}
-
-#chefAnnP{
-    top: 600px;
-    width: 110px;
-    left: 55px;
-    position: relative;
-    color: #4d863c;
-}
-
-#whyHelpP{
-    top: 520px;
-    width: 185px;
-    left: 293px;
-    position: relative;
-    color: #482c4d;
-}
-
 .lunchThumbnail{
     height: 643px;
     width:auto;
