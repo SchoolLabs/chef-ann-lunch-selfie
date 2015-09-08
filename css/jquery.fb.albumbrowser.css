@@ -33,7 +33,7 @@ ul.fb-albums, ul.fb-photos {
     background-repeat:no-repeat;
 }
 .fb-loading {
-/*    background-color: #f7f7f7;*/
+    background-color: #f7f7f7;
     border-radius: 6px;
     width: 64px;
     height: 64px;
@@ -42,6 +42,7 @@ ul.fb-albums, ul.fb-photos {
     background-repeat: no-repeat;
 }
 
+/*
 li.fb-album, li.fb-photo {
     display: inline-block;
     
@@ -57,6 +58,7 @@ li.fb-album, li.fb-photo {
     height: 234px;
     overflow: hidden;
 }
+*/
 
     li.fb-photo:hover {
         /*border:2px solid rgba(59,89,152,1);*/
@@ -108,19 +110,7 @@ div.fb-album-count {
     display: none;
 }
 
-.fb-photo-thumb, .fb-photo-thumb-link {
-    border: none;
-    text-decoration: none;
-    widows: auto;
-    overflow: visible;
-    
-    object-fit: none; /* Do not scale the image */
-    object-position: center; /* Center the image within the element */
-    height: 234px;
-    width: 234px;
-/*    clip: rect(0px,234px,234px,0px);*/
-/*    height: 234px;*/
-}
+
 
 img.fb-albums-list {
     border: none;

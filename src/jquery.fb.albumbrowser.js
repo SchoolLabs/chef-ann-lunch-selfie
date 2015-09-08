@@ -315,11 +315,13 @@
                                 var photoListItem = $("<li>", { class: "fb-photo" });
                                 var prefWidth = photoListItem.width();
                                 var prefHeight = photoListItem.height();
+                                var chefAnnW = 230;
+                                var chefAnnH = 230;
                                 var albumImg = $(result.data)[a].images[0];
                                 for (i = 0; i < $(result.data)[a].images.length; i++) {
                                     if (
                                         
-                                            ($(result.data)[a].images[i].height >= 200 && $(result.data)[a].images[i].width >= 200) &&
+                                            ($(result.data)[a].images[i].height >= chefAnnH && $(result.data)[a].images[i].width >= chefAnnW) &&
                                             ($(result.data)[a].images[i].height <= albumImg.height && $(result.data)[a].images[i].width <= albumImg.width)
                                         ) {
                                         albumImg = $(result.data)[a].images[i];
