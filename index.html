@@ -254,23 +254,30 @@
     
     
 <script>
-    
-function selectText(element) {
-    var doc = document;
-    var text = doc.getElementById(element);    
-
-    if (doc.body.createTextRange) { // ms
-        var range = doc.body.createTextRange();
-        range.moveToElementText(text);
-        range.select();
-    } else if (window.getSelection) { // moz, opera, webkit
-        var selection = window.getSelection();            
-        var range = doc.createRange();
-        range.selectNodeContents(text);
-        selection.removeAllRanges();
-        selection.addRange(range);
+    function SelectText(element) {
+        var doc = document
+            , text = doc.getElementById(element)
+            , range, selection
+        ;    
+        if (doc.body.createTextRange) {
+            range = document.body.createTextRange();
+            range.moveToElementText(text);
+            range.select();
+        } else if (window.getSelection) {
+            selection = window.getSelection();        
+            range = document.createRange();
+            range.selectNodeContents(text);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
     }
-}
+
+    document.onclick = function(e) {    
+        if (e.target.className === 'copyComment') {
+            SelectText('comment1');
+            alert("yooo");
+        }
+    };
     
     function goFullscreenMode(img){
         document.getElementById("fullscreen-meal").src = img;
@@ -288,14 +295,8 @@ function selectText(element) {
         aux.select();
         document.execCommand("copy");
         document.body.removeChild(aux);
+        SelectText(elementId);
     }
-    
-    $(function() {
-        $('.copyComment').click(function() {
-            selectText('#temp2');
-        });
-    });
-    
     
 </script>    
     
@@ -365,7 +366,7 @@ function selectText(element) {
                         <h4 class="lunchDetails-name"> BBQ Pork Ribs </h4>
                         <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/bbq-pork-ribs.jpg'); return false;"></a>
                         <br>
-                        <div ><p class="lunchDetails-comment" id="comment1" id="temp2">Move over PB&J, because Shredded Pork Tacos are my new lunchroom hero. #realschoolfood</p></div>
+                        <div ><p class="lunchDetails-comment" id="comment1">Move over PB&J, because Shredded Pork Tacos are my new lunchroom hero. #realschoolfood</p></div>
                         <a class="btn btn_secondary copyComment" onclick="copyToClipboard('comment1'); return false;"><span class="copyComment-text">Copy comment</span></a>
                     </div>
                     
