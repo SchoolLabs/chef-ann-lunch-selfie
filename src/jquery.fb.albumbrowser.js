@@ -327,7 +327,7 @@
                                         albumImg = $(result.data)[a].images[i];
                                     }
                                 }
-                                var photoLink = $("<a>", { class: "fb-photo-thumb-link", href: $(result.data)[a].link, "data-fb-page": $(result.data)[a].link });
+                                var photoLink = $("<a>", { class: "fb-photo-thumb-link", target:"_blank", href: $(result.data)[a].link, "data-fb-page": $(result.data)[a].link });
                                 var marginWidth = 0;
 
                                 if (prefWidth > 0) {
