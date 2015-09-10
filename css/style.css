@@ -129,12 +129,25 @@ li.fb-album, li.fb-photo {
 
 .fullscreen-btn{
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 10px;
+    top: -635px;
     display: inline-block;
     background-image: url(../imgs/fullscreen-icon.png);
     height: 65px;
     width: 65px;
+}
+
+.save-btn{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: inline-block;
+    background-image: url(../imgs/fullscreen-icon.png);
+    width: 105px;
+}
+.save-btn-text{
+    font-size: 24px;
+    text-transform: capitalize !important;
 }
 
 .lunchDetails-comment{
