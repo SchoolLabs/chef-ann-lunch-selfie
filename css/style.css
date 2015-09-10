@@ -61,12 +61,29 @@ li.fb-album, li.fb-photo {
 
 #lunchSection{
     margin-top: 10px;
+    width: 966px;
+}
+#accordion{
+    width: 100% !important;
 }
 
 .lunchThumbnail{
     height: 643px;
     width:auto;
     background-size: 100%;
+    position: relative;
+}
+
+
+.fullscreen-btn{
+    position: absolute;
+    right: 0px;
+    margin-top: 5px;
+    margin-right: 5px;
+    display: none;
+    background-image: url(../imgs/fullscreen-icon.png);
+    height: 65px;
+    width: 65px;
 }
 
 .foodNames{
@@ -127,16 +144,6 @@ li.fb-album, li.fb-photo {
     text-shadow: 1px 1px 1px #4c8441;
 }
 
-.fullscreen-btn{
-    position: absolute;
-    right: 10px;
-    top: -635px;
-    display: inline-block;
-    background-image: url(../imgs/fullscreen-icon.png);
-    height: 65px;
-    width: 65px;
-}
-
 .save-btn{
     position: absolute;
     right: 0px;
@@ -164,10 +171,10 @@ li.fb-album, li.fb-photo {
 }
 
 .copyComment{
-    width: 25%;
+    width: 26%;
     margin-top: 20px;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 37%;
+    margin-right: 37%;
     text-transform: capitalize !important;
 }
 

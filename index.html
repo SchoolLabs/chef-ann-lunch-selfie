@@ -16,23 +16,34 @@
     <link rel="stylesheet" type="text/css" href="/css/style_p.css" media="screen and (orientation: portrait)">
     
     <script>
-          $(function() {
+        $(function() {
             $( "#accordion" ).accordion({
-              collapsible: true,
-              heightStyle: "content",
-                active: false
+                collapsible: true,
+                heightStyle: "content",
+                active: false,
+                activate: function(event, ui) {
+                    
+                    
+                    if($.isEmptyObject(ui.newHeader[0])){
+                        //collapsing, show white text and hide fullscreen button
+                        $(ui.oldHeader).children().fadeIn("fast");
+                        $(ui.oldHeader).children(".fullscreen-btn").fadeOut("fast");
+                    }else{
+                        //expanding, hide white text and display fullscreen button
+                        $(ui.newHeader).children().fadeOut("fast");
+                        $(ui.newHeader).children(".fullscreen-btn").fadeIn("fast");
+                    }
+                }
             });
             $('#accordion h3').bind('click',function(){
                 var self = this;
                 setTimeout(function() {
-                    theOffset = $(self).offset();
-                    $('body,html').animate({ scrollTop: theOffset.top });
+                theOffset = $(self).offset();
+                $('body,html').animate({ scrollTop: theOffset.top });
                 }, 310); // ensure the collapse animation is done
             });
-
-              
-          });
-      </script>
+        });
+    </script>
     
     
                   
@@ -253,6 +264,42 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 <script>
     function SelectText(element) {
         var doc = document
@@ -347,10 +394,9 @@
                 
                 <div id="accordion">
                     
-                    <h3 id="lunch1" class="lunchThumbnail"><span class="foodNames">BBQ Pork Ribs</span></h3>
+                    <h3 id="lunch1" class="lunchThumbnail"><span class="foodNames">BBQ Pork Ribs</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/bbq-pork-ribs.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> BBQ Pork Ribs </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/bbq-pork-ribs.jpg'); return false;"></a>
                         <a href="imgs/bbq-pork-ribs.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <div ><p class="lunchDetails-comment" id="comment1">Move over PB&J, because Shredded Pork Tacos are my new lunchroom hero. #realschoolfood</p></div>
@@ -358,80 +404,80 @@
                     </div>
                     
                     
-                    <h3 id="lunch2" class="lunchThumbnail"><span class="foodNames">Beef and Broccoli</span></h3>
+                    <h3 id="lunch2" class="lunchThumbnail"><span class="foodNames">Beef and Broccoli</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/beef-and-broccoli.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Beef and Broccoli </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/beef-and-broccoli.jpg'); return false;"></a>
+                        <a href="/imgs/beef-and-broccoli.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment2" onclick="copyToClipboard('comment2')">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
                     </div>
                     
                     
-                    <h3 id="lunch3" class="lunchThumbnail"><span class="foodNames">Shredded Pork Tacos</span></h3>
+                    <h3 id="lunch3" class="lunchThumbnail"><span class="foodNames">Shredded Pork Tacos</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/shredded-pork-tacos.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Shredded Pork Tacos </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/shredded-pork-tacos.jpg'); return false;"></a>
+                        <a href="/imgs/shredded-pork-tacos.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment2" onclick="copyToClipboard('comment2')">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
                     </div>
                     
                     
-                    <h3 id="lunch4" class="lunchThumbnail"><span class="foodNames">Pulled Pork Sandwich</span></h3>
+                    <h3 id="lunch4" class="lunchThumbnail"><span class="foodNames">Pulled Pork Sandwich</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/pulled-pork-sandwich.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Pulled Pork Sandwich </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/pulled-pork-sandwich.jpg'); return false;"></a>
+                        <a href="/imgs/pulled-pork-sandwich.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment3" onclick="copyToClipboard('comment3')">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
                     </div>
                     
                     
-                    <h3 id="lunch5" class="lunchThumbnail"><span class="foodNames">Oven Fried Chicken</span></h3>
+                    <h3 id="lunch5" class="lunchThumbnail"><span class="foodNames">Oven Fried Chicken</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/oven-fried-chicken.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Oven Fried Chicken </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/oven-fried-chicken.jpg'); return false;"></a>
+                        <a href="/imgs/oven-fried-chicken.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment4" onclick="copyToClipboard('comment4')">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
                     </div>
                     
                     
-                    <h3 id="lunch6" class="lunchThumbnail"><span class="foodNames">Turkey Rueben Sandwich</span></h3>
+                    <h3 id="lunch6" class="lunchThumbnail"><span class="foodNames">Turkey Rueben Sandwich</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/turkey-rueben-sandwich.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Turkey Rueben Sandwich </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/turkey-rueben-sandwich.jpg'); return false;"></a>
+                        <a href="/imgs/turkey-rueben-sandwich.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment5" onclick="copyToClipboard('comment5')">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
                     </div>
                     
                     
-                    <h3 id="lunch7" class="lunchThumbnail"><span class="foodNames">Veggie Burger</span></h3>
+                    <h3 id="lunch7" class="lunchThumbnail"><span class="foodNames">Veggie Burger</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/veggie-burger.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Veggie Burger </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/veggie-burger.jpg'); return false;"></a>
+                        <a href="/imgs/veggie-burger.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment6" onclick="copyToClipboard('comment6')">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
                     </div>
                     
                     
-                    <h3 id="lunch8" class="lunchThumbnail"><span class="foodNames">Veggie Tofu Rice Bowl</span></h3>
+                    <h3 id="lunch8" class="lunchThumbnail"><span class="foodNames">Veggie Tofu Rice Bowl</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/veggie-tofu-rice-bowl.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Veggie Tofu Rice Bowl </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/veggie-tofu-rice-bowl.jpg'); return false;"></a>
+                        <a href="/imgs/veggie-tofu-rice-bowl.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment7" onclick="copyToClipboard('comment7')">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
                     </div>
                     
                     
-                    <h3 id="lunch9" class="lunchThumbnail"><span class="foodNames">Pesto Pizza</span></h3>
+                    <h3 id="lunch9" class="lunchThumbnail"><span class="foodNames">Pesto Pizza</span><a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/pesto-pizza.jpg'); return false;"></a></h3>
                     <div class="lunchDetails">
                         <h4 class="lunchDetails-name"> Pesto Pizza </h4>
-                        <a class="fullscreen-btn" onclick="goFullscreenMode('/imgs/pesto-pizza.jpg'); return false;"></a>
+                        <a href="/imgs/pesto-pizza.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
                         <br>
                         <p class="lunchDetails-comment" id="comment8">COMMENTCOMMENTCOMMENT</p>
                         <button class="btn btn_secondary copyComment" onclick="copyToClipboard('comment8'); return false;"><span class="copyComment-text">Copy comment</span></button>
@@ -467,6 +513,42 @@
     
     <img id="fullscreen-meal" src="/imgs/bbq-pork-ribs.jpg">
 </div><!--end #fullscreen-mode-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
