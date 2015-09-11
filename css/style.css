@@ -158,8 +158,8 @@ li.fb-album, li.fb-photo {
 }
 
 .lunchDetails-comment{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 10px;
     width: 80%;
     background-color: white;
