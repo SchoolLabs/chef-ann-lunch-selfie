@@ -13,8 +13,13 @@ $(function() {
                         //expanding, hide white text and display fullscreen button
                         $(ui.newHeader).children().fadeOut("fast");
                         $(ui.newHeader).children(".fullscreen-btn").fadeIn("fast");
-                        theOffset = $(ui.newHeader).offset();
-                        $('body,html').animate({ scrollTop: theOffset.top });
+                        
+                        $(ui.oldHeader).children().fadeIn("fast");
+                        $(ui.oldHeader).children(".fullscreen-btn").fadeOut("fast");
+                        
+//                        scroll to the top of the newly opened header
+//                        theOffset = $(ui.newHeader).offset();
+//                        $('body,html').animate({ scrollTop: theOffset.top });
                     }
                     
                 }
