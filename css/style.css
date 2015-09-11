@@ -137,19 +137,47 @@ li.fb-album, li.fb-photo {
 .lunchDetails-name{
     margin-top: 10px;;
     margin-left: 10px;
-    width: 80%;
+    width: 60%;
     font-weight: 900;
     font-size: 50px;
     color: #4c8441;
     text-shadow: 1px 1px 1px #4c8441;
 }
 
+.fb-share-btn{
+    position: absolute;
+    right: 160px;
+    top: 0px;
+    display: inline-block;
+    background-color: #3b5998;
+    color: white;
+    font-size: 24px;
+    padding: 5px;
+    height: 35px;
+    border-bottom: 3px solid #435a8b;
+}
+.fb-share-btn:hover{
+    background-color: #3b5998;
+    color: white;
+}
+
+.fb-share-text{
+    position: relative;
+    top: -6px;
+    margin-right: 5px;
+}
+
+.fb-share-icon{
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 35px;
+}
 .save-btn{
     position: absolute;
     right: 0px;
     top: 0px;
     display: inline-block;
-    background-image: url(../imgs/fullscreen-icon.png);
     width: 105px;
 }
 .save-btn-text{
