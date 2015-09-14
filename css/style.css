@@ -144,6 +144,14 @@ li.fb-album, li.fb-photo {
     text-shadow: 1px 1px 1px #4c8441;
 }
 
+div.fb-like-share-btns{
+    position: absolute;
+    top: 13px;
+    right: 200px;
+    display: inline-block;
+    transform: scale(2.3);
+}
+
 .fb-share-btn{
     position: absolute;
     right: 160px;
