@@ -40,7 +40,7 @@ li.fb-album, li.fb-photo {
 
 #infographicSection{
     background: url(../imgs/infographic-tray.png);
-    height: 1300px;
+    height: 1243px;
 }
 
 .btn-container{
@@ -147,9 +147,9 @@ li.fb-album, li.fb-photo {
 div.fb-like-share-btns{
     position: absolute;
     top: 13px;
-    right: 200px;
+    right: 175px;
     display: inline-block;
-    transform: scale(2.3);
+    transform: scale(1.75);
 }
 
 .fb-share-btn{
@@ -224,6 +224,7 @@ div.fb-like-share-btns{
 
 #fullscreen-mode{
     display: none;
+    z-index: 100;
 }
 
 #fullscreen-meal{
