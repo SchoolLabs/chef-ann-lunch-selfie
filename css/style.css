@@ -46,7 +46,7 @@ li.fb-album, li.fb-photo {
 .btn-container{
     position: relative;
     left: 16%;
-    top: 88%;
+    top: 91%;
     width: 68%;
 }
 
@@ -224,7 +224,6 @@ div.fb-like-share-btns{
 
 #fullscreen-mode{
     display: none;
-    z-index: 100;
 }
 
 #fullscreen-meal{
@@ -256,7 +255,7 @@ div.fb-like-share-btns{
 
 #rotate-screen-overlay-message{
     opacity: .85;
-    background: #e2e2e2;
+    background: #e3e3da;
     border: solid 10px #585246;
     border-radius: 20px;
     bottom: 0;
@@ -281,6 +280,8 @@ div.fb-like-share-btns{
     font-size: 50px;
     word-wrap: break-word;
     text-align: center;
+    color: #585246;
+    font-family: "Cabin", helvetica, arial, sans-serif;
 }
 
 #rotate-screen-overlay-message img{
