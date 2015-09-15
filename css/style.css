@@ -137,11 +137,20 @@ li.fb-album, li.fb-photo {
 .lunchDetails-name{
     margin-top: 10px;;
     margin-left: 10px;
-    width: 60%;
+    margin-bottom: 5px;
+    width: auto;
     font-weight: 900;
     font-size: 50px;
     color: #4c8441;
     text-shadow: 1px 1px 1px #4c8441;
+    display: inline-block;
+}
+
+.recipe{
+    font-size: 24px;
+    margin-left: 10px;
+    top: 30px;
+    position: absolute;
 }
 
 div.fb-like-share-btns{
