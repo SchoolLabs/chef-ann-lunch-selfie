@@ -147,10 +147,8 @@ li.fb-album, li.fb-photo {
 }
 
 .recipe{
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 10px;
-    top: 30px;
-    position: absolute;
 }
 
 div.fb-like-share-btns{
@@ -203,10 +201,10 @@ div.fb-like-share-btns{
 }
 
 .lunchDetails-comment{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-top: 10px;
-    width: 80%;
+    width: 84%;
     background-color: white;
     padding: 10px;
     font-size: 24px;
