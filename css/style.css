@@ -18,12 +18,11 @@ li.fb-album, li.fb-photo {
     margin-right: 2px;
     margin: 2px;
     
-/*    padding: 2px;*/
-    
     width: 237px;
     height: 237px;
     
 }
+
 
 .fb-photo-thumb, .fb-photo-thumb-link {
     border: none;
@@ -40,23 +39,90 @@ li.fb-album, li.fb-photo {
 
 #infographicSection{
     background: url(../imgs/infographic-tray.png);
-    height: 1243px;
+    height: 650px;
 }
 
-.btn-container{
-    position: relative;
-    left: 16%;
-    top: 91%;
-    width: 68%;
+#whyHelp{
+    height: auto;
+    display: inline-block;
+    text-align: justify;
 }
 
-.info-btn{
-    width: 45%;
+#whyHelp h3{
+    text-align: center;
+    font-size: 50px;
+    padding: 15px;
+    
 }
 
-.info-btn-text{
-    font-size: 24px;
-    text-transform: none;
+#whyHelp .food-indents{
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+#whyHelp ul.tabs{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    font-size: 36px;
+    min-height: 60px;
+}
+
+#whyHelp ul.tabs li{
+    list-style: none;
+    text-align: center;
+    width: 33.3%;
+    margin: 0 auto;
+    margin-left: 0px !important;
+    background: none;
+    color: rgb(88, 82, 70);
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+#whyHelp ul.tabs li.current{
+    background-color: rgba(204,204,204,.6);
+}
+
+.tab-content{
+    vertical-align: top;
+    display: none;
+    padding: 35px;
+    color: rgb(88, 82, 70);
+    background-color: rgba(204,204,204,.6);
+    line-height: 1.5;
+    font-size: 18px;
+    margin: 0 auto;
+    min-height: 243px;
+}
+
+.tab-content li{
+    list-style:decimal;
+    margin-left: 50px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+#getInvolvedSection h3{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 36px;
+    text-align: center;
+    background: #73a563;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+    line-height: 1.5;
+/*    border: solid 5px #f76b21;*/
+}
+
+#getInvolvedSection{
+    background: #73a563;
+    padding-bottom: 20px;
 }
 
 #lunchSection{
@@ -157,36 +223,6 @@ div.fb-like-share-btns{
     right: 175px;
     display: inline-block;
     transform: scale(1.75);
-}
-
-.fb-share-btn{
-    position: absolute;
-    right: 160px;
-    top: 0px;
-    display: inline-block;
-    background-color: #3b5998;
-    color: white;
-    font-size: 24px;
-    padding: 5px;
-    height: 35px;
-    border-bottom: 3px solid #435a8b;
-}
-.fb-share-btn:hover{
-    background-color: #3b5998;
-    color: white;
-}
-
-.fb-share-text{
-    position: relative;
-    top: -6px;
-    margin-right: 5px;
-}
-
-.fb-share-icon{
-    position: relative;
-    top: 2px;
-    display: inline-block;
-    width: 35px;
 }
 .save-btn{
     position: absolute;
