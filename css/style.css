@@ -2,6 +2,10 @@
 /*    margin-bottom: 10px;*/
 }
 
+#titleSection{
+    margin-bottom: 2px;
+}
+
 #socialSection{
     display: inline-block;
     margin-top: 3px;
@@ -10,7 +14,6 @@
     display: inline-block;
     list-style: none;
 }
-
 .food-container li.fb-photo, .food-container li.fb-album{
     display: inline-block;
     float: left;
@@ -51,14 +54,14 @@
     text-decoration: none;
     overflow: visible;
     
-    object-fit: cover; /* Do not scale the image */
-    object-position: center; /* Center the image within the element */
+    object-fit: cover;
+    object-position: center;
     height: 241px;
     width: 241px;
 }
 
-
 #infographicSection{
+    margin-top: 4px;
     background: url(../imgs/infographic-tray.png);
     height: 650px;
 }
@@ -67,13 +70,8 @@
     height: auto;
     display: inline-block;
     text-align: justify;
-}
-
-#whyHelp h3{
-    text-align: center;
-    font-size: 50px;
-    padding: 15px;
-    
+    margin-bottom: 10px;
+    margin-top: -7px;
 }
 
 #whyHelp .food-indents{
@@ -128,23 +126,23 @@
     display: inherit;
 }
 
+#getInvolvedSection{
+    background: #73a563;
+    padding-bottom: 20px;
+}
+
 #getInvolvedSection h3{
     width: 60%;
     margin: 0 auto;
     font-size: 36px;
     text-align: center;
     background: #73a563;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     padding: 10px;
     padding-top: 0px;
     line-height: 1.5;
 /*    border: solid 5px #f76b21;*/
-}
-
-#getInvolvedSection{
-    background: #73a563;
-    padding-bottom: 20px;
 }
 
 #lunchSection{
@@ -174,4 +172,6 @@
     background: #3a5795;
     padding: 7px;
     margin-right: 2px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 8px black;
 }
