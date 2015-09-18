@@ -6,8 +6,32 @@
     display: inline-block;
     margin-top: 3px;
 }
+.food-container{
+    display: inline-block;
+    list-style: none;
+}
 
-li.fb-album, li.fb-photo {
+.food-container li.fb-photo, .food-container li.fb-album{
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom-style: none;
+
+    margin-left: 2px;
+    margin-right: 2px;
+    margin: 2px;
+    
+}
+.food-container .fb-photo-thumb, .food-container .fb-photo-thumb-link{
+    display: inline-block;
+    width: 318px;
+    height: auto;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+}
+
+#facebookFeed li.fb-album, #facebookFeed li.fb-photo {
     display: block;    
     float: left;
     overflow: hidden;
@@ -22,15 +46,12 @@ li.fb-album, li.fb-photo {
     height: 237px;
     
 }
-
-
 .fb-photo-thumb, .fb-photo-thumb-link {
     border: none;
     text-decoration: none;
-    widows: auto;
     overflow: visible;
     
-    object-fit: none; /* Do not scale the image */
+    object-fit: cover; /* Do not scale the image */
     object-position: center; /* Center the image within the element */
     height: 241px;
     width: 241px;
@@ -116,6 +137,7 @@ li.fb-album, li.fb-photo {
     font-weight: 600;
     color: white;
     padding: 10px;
+    padding-top: 0px;
     line-height: 1.5;
 /*    border: solid 5px #f76b21;*/
 }
@@ -126,227 +148,30 @@ li.fb-album, li.fb-photo {
 }
 
 #lunchSection{
-    margin-top: 10px;
+    margin-top: 5px;
     width: 966px;
 }
-#accordion{
-    width: 100% !important;
-}
 
-.lunchThumbnail{
-    height: 643px;
-    width:auto;
-    background-size: 100%;
-    position: relative;
-}
-
-
-.fullscreen-btn{
-    position: absolute;
-    right: 0px;
-    margin-top: 5px;
-    margin-right: 5px;
-    display: none;
-    background-image: url(../imgs/fullscreen-icon.png);
-    height: 65px;
-    width: 65px;
-}
-
-.foodNames{
-    font-weight: 900;
-    font-size: 60px;
+#ending-facebook-prompt-banner{
     color: white;
-    top: 85%;
-    left: 25px;
-    transform: translate(-50%,-50%); 
-    position: relative;
-    text-shadow: 6px 2px 2px #000000;
-}
-
-#lunch1{
-    background-image: url("../imgs/bbq-pork-ribs.jpg");
-}
-#lunch2{
-    background-image: url("../imgs/beef-and-broccoli.jpg");
-}
-#lunch3{
-    background-image: url("../imgs/shredded-pork-tacos.jpg");
-}
-#lunch4{
-    background-image: url("../imgs/pulled-pork-sandwich.jpg");
-}
-#lunch5{
-    background-image: url("../imgs/oven-fried-chicken.jpg");
-}
-#lunch6{
-    background-image: url("../imgs/turkey-rueben-sandwich.jpg");
-}
-#lunch7{
-    background-image: url("../imgs/veggie-burger.jpg");
-}
-#lunch8{
-    background-image: url("../imgs/veggie-tofu-rice-bowl.jpg");
-}
-#lunch9{
-    background-image: url("../imgs/pesto-pizza.jpg");
-}
-
-.lunchDetails{
-    height: 270px;
-    width: 100%;
-    padding-top: 10px;
-    background-color: #e8e7dd;
-    display: inline-block;
-    position: relative;
-}
-
-.lunchDetails-name{
-    margin-top: 10px;;
-    margin-left: 10px;
+    background: #f76b21;
     margin-bottom: 5px;
-    width: auto;
-    font-weight: 900;
-    font-size: 50px;
-    color: #4c8441;
-    text-shadow: 1px 1px 1px #4c8441;
-    display: inline-block;
 }
 
-.recipe{
-    font-size: 20px;
-    margin-left: 10px;
-}
-
-div.fb-like-share-btns{
-    position: absolute;
-    top: 13px;
-    right: 175px;
-    display: inline-block;
-    transform: scale(1.75);
-}
-.save-btn{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    display: inline-block;
-    width: 105px;
-}
-.save-btn-text{
-    font-size: 24px;
-    text-transform: capitalize !important;
-}
-
-.lunchDetails-comment{
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-top: 10px;
-    width: 84%;
-    background-color: white;
-    padding: 10px;
-    font-size: 24px;
-    line-height: 1.6;
-    color: #585246;
-    
-}
-
-.copyComment{
-    width: 26%;
-    margin-top: 20px;
-    margin-left: 37%;
-    margin-right: 37%;
-    text-transform: capitalize !important;
-}
-
-.copyComment-text{
-    font-size: 24px;
-}
-
-#shareSection{
-    
-}
-
-#fullscreen-mode{
-    display: none;
-}
-
-#fullscreen-meal{
-    max-width: 100%;
-    max-height: 100%;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    overflow: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
-}
-
-#rotate-screen-overlay-background{
-    max-width: 100%;
-    max-height: 100%;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    overflow: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
-    
-    background-color: #151515;
-    opacity: .90;
-}
-
-#rotate-screen-overlay-message{
-    opacity: .85;
-    background: #e3e3da;
-    border: solid 10px #585246;
-    border-radius: 20px;
-    bottom: 0;
-    height: 300px;
-    left: 0;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 450px;   
-}
-
-#rotate-screen-overlay-text{
-    bottom: 0;
-    height: 275px;
-    left: 0;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 425px;   
-    font-size: 50px;
-    word-wrap: break-word;
+#ending-facebook-prompt{
+    padding: 20px;
+    width: 80%;
     text-align: center;
-    color: #585246;
-    font-family: "Cabin", helvetica, arial, sans-serif;
+    margin: 0 auto;
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 500;
+    
 }
 
-#rotate-screen-overlay-message img{
-    width: 150px;
-    height:1 50px;
-    position: fixed;
-    margin: auto;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.fb-blue{
+    color: white;
+    background: #3a5795;
+    padding: 7px;
+    margin-right: 2px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -362,122 +362,38 @@
             
             <div id="lunchSection" class="contentSection">
                 
-                <img src="imgs/lunch-banner.png">
-                
-                <div id="accordion">
-                    
-                    <h3 id="lunch1" class="lunchThumbnail"><span class="foodNames">BBQ Pork Ribs</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> BBQ Pork Ribs </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MB102" target="_blank">Recipe</a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659706247704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <a href="imgs/bbq-pork-ribs.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <br>
-                        
-                        <p class="lunchDetails-comment" id="comment1">Move over PB&J, because BBQ Pork Ribs are my new lunchroom hero. #realschoolfood</p>
-                        <button class="btn btn_secondary copyComment" onclick="copyToClipboard('comment1'); return false;"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
-                    
-                    <h3 id="lunch2" class="lunchThumbnail"><span class="foodNames">Beef and Broccoli</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Beef and Broccoli </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MB110" target="_blank">Recipe</a>
-                        <a href="/imgs/beef-and-broccoli.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659706212704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment2" onclick="copyToClipboard('comment2')">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
+                <div id="facebookFoodFeed">
+                    <div class="food-container"></div>
 
-                    <h3 id="lunch3" class="lunchThumbnail"><span class="foodNames">Shredded Pork Tacos</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Shredded Pork Tacos </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MB130" target="_blank">Recipe</a>
-                        <a href="/imgs/shredded-pork-tacos.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659706382704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment2" onclick="copyToClipboard('comment2')">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
+                      <script type="text/javascript">
+                        $(document).ready(function () {
+                          $(".food-container").FacebookAlbumBrowser({
+                                account: "chefannfoundation",
+                                onlyAlbum: 10153659705852704,
+                                accessToken: "775908159169504|cYEIsh0rs25OQQC8Ex2hXyCOut4",
+                                showAccountInfo: false,
+                                showImageCount: false,
+                                showImageText: false,
+                                lightbox: false,
+                                photosCheckbox: true,
+                              likeButton:true,
+                              photosPageSize: 9
+                                
+                            });
+                        });
+                  </script>
                     
-                    
-                    <h3 id="lunch4" class="lunchThumbnail"><span class="foodNames">Pulled Pork Sandwich</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Pulled Pork Sandwich </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MB500" target="_blank">Recipe</a>
-                        <a href="/imgs/pulled-pork-sandwich.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659706242704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment3" onclick="copyToClipboard('comment3')">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
-                    
-                    <h3 id="lunch5" class="lunchThumbnail"><span class="foodNames">Oven Fried Chicken</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Oven Fried Chicken </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MP320" target="_blank">Recipe</a>
-                        <a href="/imgs/oven-fried-chicken.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659706667704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment4" onclick="copyToClipboard('comment4')">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
-                    
-                    <h3 id="lunch6" class="lunchThumbnail"><span class="foodNames">Turkey Rueben Sandwich</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Turkey Rueben Sandwich </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MP426" target="_blank">Recipe</a>
-                        <a href="/imgs/turkey-rueben-sandwich.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659706887704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment5" onclick="copyToClipboard('comment5')">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
-                    
-                    <h3 id="lunch7" class="lunchThumbnail"><span class="foodNames">Veggie Burger</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Veggie Burger </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MV401" target="_blank">Recipe</a>
-                        <a href="/imgs/veggie-burger.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659706682704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment6" onclick="copyToClipboard('comment6')">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
-                    
-                    <h3 id="lunch8" class="lunchThumbnail"><span class="foodNames">Veggie Tofu Rice Bowl</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Veggie Tofu Rice Bowl </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/MV432" target="_blank">Recipe</a>
-                        <a href="/imgs/veggie-tofu-rice-bowl.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659707067704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment7" onclick="copyToClipboard('comment7')">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
-                    
-                    <h3 id="lunch9" class="lunchThumbnail"><span class="foodNames">Pesto Pizza</span></h3>
-                    <div class="lunchDetails">
-                        <h4 class="lunchDetails-name"> Pesto Pizza </h4>
-                        <a class="recipe" href="http://www.thelunchbox.org/recipes-menus/recipes/ZA042" target="_blank">Recipe</a>
-                        <a href="/imgs/pesto-pizza.jpg" download class="btn btn_secondary save-btn"><span class="save-btn-text">Save</span></a>
-                        <div class="fb-like fb-like-share-btns" data-href="https://www.facebook.com/chefannfoundation/photos/a.10153659705852704.1073741829.117329027703/10153659707197704/?type=3&amp;theater" data-height="200" data-width="100" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-                        <br>
-                        <p class="lunchDetails-comment" id="comment8">COMMENTCOMMENTCOMMENT</p>
-                        <button class="btn btn_secondary copyComment" onclick="copyToClipboard('comment8'); return false;"><span class="copyComment-text">Copy comment</span></button>
-                    </div>
-                    
-                    
-                </div><!-- end .accordian  -->
+                </div> <!-- end .facebookFoodFeed  -->
+                
+                
+                
             </div> <!-- end .lunchSection  -->
             <div id="wrapUpSection" class="contentSection">
+                <section id="ending-facebook-prompt-banner">
+                    <p id="ending-facebook-prompt">
+                        Now that you're all set <br> check out the rest of our photos on <a href="https://www.facebook.com/media/set/?set=a.10150433804992704.422749.117329027703&type=3" target="_blank"><span class="fb-blue">Facebook</span></a>.
+                    </p>
+                </section>
                 <img src="imgs/wrap-up.png">
             </div> <!-- end .wrapUpSection  -->
             
@@ -492,9 +408,7 @@
     
     
     
-    
-    
-    
+
     
     
     
