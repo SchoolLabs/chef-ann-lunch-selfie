@@ -106,6 +106,8 @@
 }
 #whyHelp ul.tabs li.current{
     background-color: rgba(204,204,204,.6);
+/*    background-color: #e7e7dd;*/
+    background-color: rgba(133, 120, 112, .2);
 }
 
 .tab-content{
@@ -114,12 +116,13 @@
     padding: 35px;
     color: rgb(88, 82, 70);
     background-color: rgba(204,204,204,.6);
+/*    background-color: #e7e7dd;*/
+    background-color: rgba(133, 120, 112, .2);
     line-height: 1.5;
     font-size: 18px;
     margin: 0 auto;
     min-height: 243px;
 }
-
 .tab-content li{
     list-style:decimal;
     margin-left: 50px;
@@ -130,7 +133,7 @@
 }
 
 #getInvolved{
-    background: #73a563;
+    background: #51843C;
     padding-bottom: 20px;
     position: relative;
 }
@@ -138,12 +141,12 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    color: white;
+    color: #e7e7dd;
     font-size: 75px;
     font-weight: 700;
     padding-top: 75px;
     padding-bottom: 30px;
-    background: #73a563;
+/*    background: #73a563;*/
 }
 #getInvolved .lines{
     position:inherit;
@@ -156,7 +159,7 @@
 #getInvolved article{
     width: 85%;
     margin: 0 auto;
-    color: white;
+    color: #e7e7dd;
 /*    background: red;*/
 }
 #getInvolved .instruction img{
@@ -202,9 +205,11 @@
     display: inline-block;
     width: 88%;
     vertical-align: top;
+    line-height: 1.5;
     text-align: center;
     font-size: 22px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 #getInvolved #comments button{
     display: inline-block;
@@ -219,11 +224,9 @@
     margin: 0 auto;
     font-size: 36px;
     text-align: center;
-    background: #73a563;
     font-weight: 500;
-    color: white;
+    color: #e7e7dd;
     padding: 10px;
-/*    padding-top: 20px;*/
     line-height: 1.5;
 }
 
@@ -232,8 +235,8 @@
 }
 
 #ending-facebook-prompt-banner{
-    color: white;
-    background: #f76b21;
+    color: #e7e7dd;
+    background: #F16422;
 }
 
 #ending-facebook-prompt{
@@ -256,21 +259,21 @@
 }
 
 #otherOptions{
-    background: #73a563;
+    background: #51843C;
     padding-bottom: 20px;
 }
 
 #otherOptions h3{
     position: relative;
     font-size: 45px;
-    color: white;
+    color: #e7e7dd;
     margin: 0 auto;
     width: 90%;
     text-align: center;
     padding: 30px;
     padding-top: 40px;
     font-weight: 700;
-    color: white;
+    color: #e7e7dd;
 }
 #otherOptions .other-lines{
     position:relative;
@@ -292,24 +295,25 @@
     display: inline-block;
     position: relative;
     vertical-align: top;
-    color: #f76b21;
+    color: #e7e7dd;
     font-size: 40px;
-    top: 80px;
-    left: 110px;
-    width: 0px;
+    top: 25px;
+    width: 80%;
+    left: 35px;
     font-weight: 600;
 }
 #otherOptions li p{
     display: inline-block;
-    width: 50%;
-    color: white;
+    width: 90%;
+    color: #e7e7dd;
     font-size: 24px;
     vertical-align: top;
     position: relative;
-    left: 110px;
+    left: 35px;
     line-height: 1.3;
-    top: 140px;
+    top: 35px;
     font-weight: 500;
+    margin-bottom: 50px;
 }
 #wrapUp{
     background-image: url(../imgs/wrap-up.jpg);
@@ -325,13 +329,12 @@
 #wrapUp h3{
     position: relative;
     font-size: 45px;
-    color: white;
     margin: 0 auto;
     width: 90%;
     text-align: center;
     top: 80px;
     font-weight: 700;
-    color: #F5BC47;
+    color: #FFC627;
 }
 #wrapUp h4{
     position: relative;
@@ -349,7 +352,7 @@
     font-size: 20px;
     width: 390px;
     line-height: 1.5;
-    color: white;
+    color: #e7e7dd;
     top: 180px;
     left: 525px;
 }

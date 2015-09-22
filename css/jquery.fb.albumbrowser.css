@@ -28,7 +28,6 @@ ul.fb-albums, ul.fb-photos {
     background-image:none;
 }
 .fb-loading-image{
-    background-image:url('loader.gif') !important;
     background-position: center center;
     background-repeat:no-repeat;
 }
@@ -37,7 +36,6 @@ ul.fb-albums, ul.fb-photos {
     border-radius: 6px;
     width: 64px;
     height: 64px;
-    background-image: url('loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -78,7 +76,6 @@ li.fb-album, li.fb-photo {
 
         li.fb-photo .image-check.checked {
             display: block;
-            background-image: url('check.png');
             background-position: left top;
             background-repeat: no-repeat;
         }
@@ -137,7 +134,6 @@ img.fb-albums-list {
     top: 0px;
     left: 0px;
     z-index: 999;
-    background-image: url('loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
@@ -209,7 +205,6 @@ img.fb-comment-account {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-image: url('loader.gif');
     background-position: center center;
     background-repeat: no-repeat;
 }

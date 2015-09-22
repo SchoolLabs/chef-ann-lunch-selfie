@@ -568,8 +568,8 @@
                     if (settings.showImageText || settings.likeButton || settings.shareButton) {
                         lightboxContent.append($("<div>", { class: "fb-preview-text" }));
                     }
-                    overlay.append($("<img>", { class: "fb-preview-img-prev", src: settings.pluginImagesPath + "prev-icon.png" }));
-                    overlay.append($("<img>", { class: "fb-preview-img-next", src: settings.pluginImagesPath + "next-icon.png" }));
+                    overlay.append($("<img>", { class: "fb-preview-img-prev"}));
+                    overlay.append($("<img>", { class: "fb-preview-img-next"}));
 
                     $("body").append(overlay);
                     overlay = $(".fb-preview-overlay");
