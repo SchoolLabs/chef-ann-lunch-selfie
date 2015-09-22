@@ -8,3 +8,14 @@ if(isMobile){
     $(".tab-content.current").css('font-size', '15px');
     $("#otherWaysHeader").css('font-size', '18px');
 }
+
+var isChromium = window.chrome,
+    vendorName = window.navigator.vendor,
+    isOpera = window.navigator.userAgent.indexOf("OPR") > -1;
+if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false) {
+   // is Google chrome 
+} else {
+    $("#copy-comment-btn").css('display', 'none');
+//    document.getElementById("copy-comment-btn").display = "none";
+//    alert("yoo");
+}
