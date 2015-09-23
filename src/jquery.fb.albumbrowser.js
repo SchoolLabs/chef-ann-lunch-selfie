@@ -310,7 +310,7 @@
                                     });
                                 }
                             }
-
+//                            for (a = 8; a >= 0; a--) {
                             for (a = 0; a < 9; a++) {
                                 var photoListItem = $("<li>", { class: "fb-photo" });
                                 var prefWidth = photoListItem.width();
