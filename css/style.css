@@ -352,8 +352,13 @@
     position: relative;
     font-size: 20px;
     width: 390px;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #e7e7dd;
     top: 145px;
     left: 525px;
+}
+#wrapUp p span{
+    position: absolute;
+    right: 5px;
+    bottom: -15px;
 }
