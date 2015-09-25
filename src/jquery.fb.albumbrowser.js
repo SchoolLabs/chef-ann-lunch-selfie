@@ -311,7 +311,7 @@
                                 }
                             }
 //                            for (a = 8; a >= 0; a--) {
-                            for (a = 0; a < 9; a++) {
+                            for (a = result.data.length-1; a >= 0; a--) {
                                 var photoListItem = $("<li>", { class: "fb-photo" });
                                 var prefWidth = photoListItem.width();
                                 var prefHeight = photoListItem.height();
